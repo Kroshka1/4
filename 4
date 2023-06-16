@@ -1,0 +1,8 @@
+# logger.info(f'Скачиваю вторую базу данных')
+
+    with open(file_query3, 'r') as file:
+        payload = json.load(file)
+
+    execution_id = get_execution_id(session, QUERY2)
+    logger.info(f'ID #2 базы данных №{QUERY2}: {execution_id}')
+    payload['variables']['execution_id'] = execution_id
